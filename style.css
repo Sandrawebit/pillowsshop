@@ -76,8 +76,8 @@ p {
 .main-page {
     padding: 190px;
     background-image: url("img/background-main.jpg");
-    background-color: #494747;
     background-size: cover;
+    background-color: #494747;
     height: 100vh;
     background-position: center;    
 }
@@ -149,8 +149,6 @@ a span {
 
 .footer {
     background-color: #1d1c1c;
-    position: absolute;
-    width: 100%;
     padding: 20px;
 }
 
@@ -247,11 +245,10 @@ a span {
         width: 250px;
         left: -250px;
         top: 0;
-        background-color: rgb(48, 44, 44);
         padding: 70px 40px 20px;
         transition: transform .5s;
         z-index: 2;
-        background-color: var(--bg-burger-menu);
+        background-color: rgb(49, 48, 48);
     }
 
     .nav ul {
@@ -261,21 +258,17 @@ a span {
     .nav a {
         display: block;
         padding: 10px 0;
-        color: var(--text-color);
     }
 
     .header.open .nav {
         transform: translateX(100%);
     }
 
-    .nav ul li ul {
-        left: 25px;
-    }
-    .nav ul li {
-        position: static;
+    body {
+        font-size: 20px;
     }
 
-    .nav ul li ul li ul {
-        top: 120px
+    .h1 {
+        font-size: 30px;
     }
 }
