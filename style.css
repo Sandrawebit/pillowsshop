@@ -1,0 +1,301 @@
+@import url('https://fonts.googleapis.com/css2?family=Playpen+Sans:wght@400;600&display=swap');
+
+
+body, html {
+    text-align: center;
+    font-size: 24px;
+    color: #1d1c1c;
+    font-family: 'Playpen Sans', cursive, sans-serif;
+    font-weight: 400;
+    overflow-x: hidden;
+}
+
+.container {
+    max-width: 970px;
+    padding: 0 15px;
+    margin: 0 auto;
+}
+
+.flex-box {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: 30px;
+}
+
+.h1 {
+    font-size: 50px;
+    color: #fff;
+}
+
+h3 {
+    margin: 20px 10px; 
+}
+
+h2 {
+    font-weight: 600;
+}
+
+p {
+    margin-bottom: 20px;
+    font-size: 36px;
+    color: #b337a2;
+}
+
+/* Header */
+
+.header-container {
+    background-color: rgb(49, 48, 48);
+    color: #fff;
+    position: fixed;
+    width: 100%;  
+}
+
+.header-container a {
+    display: flex;
+    align-items: center;
+}
+
+.header-container img {
+    max-width: 40px;
+}
+
+.nav li:hover {
+    color: #b337a2;
+}
+
+.nav li:active {
+    color: #b337a2;
+}
+
+.logo:hover {
+    color: #e291d7;
+}
+
+/* Main-page */
+
+.main-page {
+    padding: 190px 20px;
+    background-image: url("img/background-main.jpg");
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-color: #494747;
+    height: 100vh;
+    background-position: center;    
+} 
+
+/* Pillows */
+
+.pillows {
+    padding: 90px 20px;
+}
+
+.pillows img {
+    max-width: 300px;
+}
+
+.title {
+    margin-bottom: 50px;
+    font-size: 36px;
+}
+
+.pillows-item {
+    display: flex;
+    gap: 20px;
+    flex-wrap: wrap;
+}
+
+.pillows-item div {
+    flex-basis: 25%;  
+    padding-bottom: 10px;
+    margin: 0 auto;
+} 
+
+/* About */
+
+.about {
+    padding: 50px 20px;
+}
+
+.about img {
+    max-width: 300px;
+}
+
+.black-link {
+    background-color: #1d1c1c;
+    border-radius: 14%;
+    padding: 5px 10px;
+    margin-right: 10px;
+}
+
+a span {
+    color: #fff;
+}
+
+.black-link:hover {
+    background-color: #494747;
+}
+
+.link {
+    background-color: #fff;
+    border: 1px solid #000;
+    border-radius: 9%;
+    padding: 5px 10px;
+    
+}
+
+.link:hover {
+    background-color: #e2dfe1;
+}
+
+/* Footer */
+
+.footer {
+    background-color: #1d1c1c;
+    padding: 20px;
+}
+
+.footer li {
+    color: #fff;
+    text-decoration: underline;
+    font-size: 18px;
+    margin-bottom: 5px;
+}
+
+.footer a:hover {
+    color: #b337a2;
+}  
+
+/* About-page */
+
+.about-page {
+    padding: 100px 20px;
+}
+
+.about-page img {
+    max-width: 50%;
+} 
+
+/* Buy */
+
+.buy {
+    padding: 100px 20px;
+}
+
+.buy p+p {
+    color: #1d1c1c;
+    font-weight: 600;
+}
+
+.pillows-item div:hover {
+    outline: 1px solid #757272;
+}
+
+/* Burger menu */
+
+.burger-btn {
+    display: none;
+    position: relative;
+    width: 40px;
+    height: 40px; 
+    z-index: 2;
+}
+
+.burger-btn span {
+    position: absolute;
+    width: 30px;
+    height: 3px;
+    background-color: #fff;
+    right: 5px;
+    transition: transform .5s, opacity .5s, background-color .5s;
+}
+
+.burger-btn span:nth-child(1) {
+    transform: translateY(-10px);
+}
+
+.burger-btn span:nth-child(3) {
+    transform: translateY(10px);
+}
+
+.header.open .burger-btn span:nth-child(1) {
+    transform: translateY(0) rotate(45deg);
+}
+
+.header.open .burger-btn span:nth-child(2) {
+    opacity: 0;
+}
+
+.header.open .burger-btn span:nth-child(3) {
+    transform: translateY(0) rotate(-45deg);
+}
+
+.header.open .burger-btn span {
+    background-color: #fff;
+} 
+
+.common-section {
+    padding: 60px;
+}
+
+/* Media */
+
+@media (max-width: 645px) {
+
+    .burger-btn {
+        display: block;
+        z-index: 5;
+    }
+
+    .nav {
+        position: absolute;
+        width: 250px;
+        left: -250px;
+        top: 0;
+        padding: 70px 40px 20px;
+        transition: transform .5s;
+        z-index: 2;
+        background-color: rgb(49, 48, 48);
+    }
+
+    .nav ul {
+        display: block;
+    }
+
+    .nav a {
+        display: block;
+        padding: 10px 0;
+    }
+
+    .header.open .nav {
+        transform: translateX(100%);
+    }
+
+    body {
+        font-size: 20px;
+    }
+
+    .h1 {
+        font-size: 36px;
+    }
+
+    .main-page {
+        padding-top: 300px;
+    }
+
+    .about img {
+        max-width: 150px;
+        padding: 5px;
+    }
+
+    .about-page img {
+        max-width: 150px;
+        padding: 5px;
+    }
+
+    .test {
+        min-width: 250px;
+    }
+
+    
+}
