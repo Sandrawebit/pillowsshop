@@ -293,9 +293,11 @@ a span {
         padding: 5px;
     }
 
-    .test {
-        min-width: 250px;
+    .about-page p {
+        min-width: 250px;  
     }
-
     
+    .about-container {
+        display: initial;
+    }
 }
